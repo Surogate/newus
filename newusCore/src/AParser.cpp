@@ -2,18 +2,12 @@
 #include "AParser.hpp"
 
 
-AParser::AParser()
+AParser::AParser(std::istream& stream) : _stream(stream)
 {}
 
 AParser::~AParser()
 {}
 
-AParser::AParser(const AParser& orig)
+AParser::AParser(const AParser& orig) : _stream(orig._stream)
 {}
 
-AParser& AParser::operator =(const AParser& orig) {
-    if (this != &orig) {
-        //do stuff
-    }
-    return *this;
-}

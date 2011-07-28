@@ -8,12 +8,16 @@
 #ifndef APARSER_HPP
 #define	APARSER_HPP
 
+#include <istream>
+
 class AParser {
 public:
-    AParser();
+    AParser(std::istream& stream);
     AParser(const AParser& orig);
     ~AParser();
-    AParser& operator=(const AParser& orig);
+
+private:
+    std::istream& _stream;
 };
 
 #endif	/* APARSER_HPP */
