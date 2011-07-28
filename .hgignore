@@ -1,0 +1,5 @@
+glob:build
+glob:Makefile
+glob:nbproject
+glob:dist
+glob:.dep.inc
