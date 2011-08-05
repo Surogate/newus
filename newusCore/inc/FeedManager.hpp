@@ -14,6 +14,8 @@ class FeedManager {
 public:
     typedef boost::asio::io_service Io_service;
 
+    FeedManager();
+
     Io_service& getIo_service();
     const Io_service& getIo_service() const;
 

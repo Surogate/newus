@@ -1,5 +1,9 @@
 
 #include "FeedManager.hpp"
+#include "RequestForge.hpp"
+
+FeedManager::FeedManager() : _io_service()
+{}
 
 FeedManager::Io_service& FeedManager::getIo_service() {
     return _io_service;

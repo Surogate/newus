@@ -7,8 +7,17 @@
 
 #include <iostream>
 
-int main(int ac, char** av) {
-    std::cout << "hello world !!11" << std::endl;
+#include "FeedManager.hpp"
+#include "RequestForge.hpp"
+
+int main(void) {
+    FeedManager manager;
+
+    RequestForge forge(manager);
+
+    forge.ConnectTo("rockpapershotgun.com");
+    forge.GetRequest("rockpapershotgun.com", "/xmlrpc.php");
+
     return 0;
 }
 
