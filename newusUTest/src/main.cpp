@@ -17,6 +17,8 @@ int main(void) {
 	
 	Feed test(manager, input);
 
+	test.GetArticle();
+
 	std::cin.get();
     return 0;
 }

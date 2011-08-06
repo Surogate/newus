@@ -9,13 +9,13 @@
 template < typename T, std::size_t SIZE >
 Array {
 public:
+	typedef T ArrayType;
+
 	class ArrayException : public std::exception {
 		const char* what() const throw() {
 			return "Index out of bound";
 		}
 	};
-
-	typedef T ArrayType;
 
 	Array()
 	{}
@@ -53,7 +53,7 @@ public:
 		return at(index);
 	}
 
-	const T& operator[](unsigned int index) {
+	const T& operator[](unsigned int index) const {
 		return at(index);
 	}
 

@@ -16,15 +16,27 @@ class RequestForge {
 public:
     typedef boost::asio::ip::tcp::socket Socket;
 
+	enum Error {
+		NONE,
+		NOT_CONNECTED,
+		SENDING_REQUEST_FAIL,
+		INVALID_RESPONSE,
+		INVALID_FORMAT,
+		READ_HEADER_FAIL,
+		READ_BODY_FAIL
+	};
+
     RequestForge(FeedManager& owner);
 	~RequestForge();
     bool ConnectTo(const std::string& addr);
     bool Connected() const;
     bool GetRequest(const std::string& host, const std::string& path);
 	void Disconnect();
+	Error getError() const;
 
 private:
     Socket _socket;
+	Error _error;
 
     bool ValidResponse(const std::istream& response_stream, const std::string& http_version) {
         return !(!response_stream || http_version.substr(0, 5) != "HTTP/");

@@ -6,8 +6,8 @@
 #include "RequestForge.hpp"
 #include "FeedManager.hpp"
 
-RequestForge::RequestForge(FeedManager& owner) : _socket(owner.getIo_service()) {
-}
+RequestForge::RequestForge(FeedManager& owner) : _socket(owner.getIo_service()), _error(NONE)
+{}
 
 RequestForge::~RequestForge() {
 	Disconnect();
@@ -62,6 +62,8 @@ void RequestForge::SetPostRequest(std::ostream& request_stream, const std::strin
 }
 
 bool RequestForge::GetRequest(const std::string& host, const std::string& path) {
+	std::cout << "host " << host << std::endl;
+	std::cout << "path " << path << std::endl;
     bool result = false;
 	if (Connected()) {
 		boost::system::error_code error;
@@ -73,7 +75,11 @@ bool RequestForge::GetRequest(const std::string& host, const std::string& path) 
 		boost::asio::write(_socket, request, boost::asio::transfer_all(), error);
 		if (!error) {
 			result = HandleResponse();
+		} else {
+			_error = SENDING_REQUEST_FAIL;
 		}
+	} else {
+		_error = NOT_CONNECTED;
 	}
 	return result;
 }
@@ -97,30 +103,34 @@ bool RequestForge::HandleResponse() {
 			if (status_code == 200) {
 				result = DisplayBody(response, response_stream);
 			} else {
-				std::cout << "http version " << http_version << std::endl;
+				_error = INVALID_RESPONSE;
 				std::cout << "status code " << status_code << std::endl;
-				std::cout << "status message " << status_message << std::endl;
-			}
-		} else {
-			std::cout << "Invalid response" << std::endl;
+			} 
+			_error = INVALID_FORMAT;
 		}
 	} else {
-		std::cout << "error read until " << error.message() << std::endl;
+		_error = READ_HEADER_FAIL;
 	}
     return result;
 }
 
 bool RequestForge::DisplayBody(boost::asio::streambuf& response, std::istream& response_stream) {
-    boost::asio::read_until(_socket, response, "\r\n\r\n");
+	std::cout.flush();
+	std::cin.get();
+    boost::asio::read_until(_socket, response, "\r\n\r\n"); //consume jusqu'au header http
     DisplayBodyHeader(response, response_stream);
+	std::cin.get();
     return DisplayBodyBody(response, response_stream);
 }
 
 bool RequestForge::DisplayBodyHeader(boost::asio::streambuf& response, std::istream& response_stream) {
     std::string header;
-    while (std::getline(response_stream, header) && header != "\r")
-        std::cout << header << std::endl;
-    std::cout << std::endl;
+	std::cout << "### start" << std::endl;
+    while (std::getline(response_stream, header) && header != "\r") {
+        std::cout << header.size() << " " << header << std::endl;
+	}
+	std::cout << "## end" << std::endl;
+	std::cin.get();
     if (response.size() > 0)
         std::cout << &response;
     return true;
@@ -135,8 +145,12 @@ bool RequestForge::DisplayBodyBody(boost::asio::streambuf& response, std::istrea
     if (error == boost::asio::error::eof) {
         result = true;
     } else {
-        std::cout << "error " << error.message() << std::endl;
+		_error = READ_BODY_FAIL;
     }
     return result;
+}
+
+RequestForge::Error RequestForge::getError() const {
+	return _error;
 }
 

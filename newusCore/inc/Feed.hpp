@@ -10,6 +10,9 @@
 
 class FeedManager;
 
+#include <deque>
+
+#include "Article.hpp"
 #include "RequestForge.hpp"
 
 class Feed {
@@ -17,10 +20,13 @@ public:
 	Feed(FeedManager& fm, const std::string& addr);
 	~Feed();
 
+	void GetArticle();
+
 private:
 	void parseAddr(const std::string& addr);
 
 	RequestForge _forge;
+	std::deque< Article > _ArticleList;
 	std::string _host;
 	std::string _path;
 };

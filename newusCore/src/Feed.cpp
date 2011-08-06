@@ -6,6 +6,7 @@
 
 Feed::Feed(FeedManager& fm, const std::string& addr) : _forge(fm), _host(), _path() {
 	parseAddr(addr);
+	_forge.ConnectTo(_host);
 }
 
 Feed::~Feed()
@@ -21,6 +22,15 @@ void Feed::parseAddr(const std::string& addr) {
 	while (addr[pathEndIndex] != '/') pathEndIndex--;
 
 	_host = addr.substr(start, end - start);
-	_path = addr.substr(end, pathEndIndex - end);
+	_path = addr.substr(end, pathEndIndex - end + 1);
 }
 
+void Feed::GetArticle() {
+	if (_forge.GetRequest(_host, _path))
+		std::cout << "request ok" << std::endl;
+	else {
+		std::cout << "request fail" << std::endl;
+		std::cout << _forge.getError() << std::endl;
+	}
+
+}
