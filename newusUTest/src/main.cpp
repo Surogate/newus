@@ -8,16 +8,18 @@
 #include <iostream>
 
 #include "FeedManager.hpp"
-#include "RequestForge.hpp"
+#include "Feed.hpp"
 
 int main(void) {
     FeedManager manager;
+	//const std::string host = "www.rockpapershotgun.com";
+	//const std::string path = "/feed/";
 
-    RequestForge forge(manager);
+	std::string input = "http://www.rockpapershotgun.com/feed/";
+	
+	Feed test(manager, input);
 
-    forge.ConnectTo("rockpapershotgun.com");
-    forge.GetRequest("rockpapershotgun.com", "/xmlrpc.php");
-
+	//std::cin.get();
     return 0;
 }
 

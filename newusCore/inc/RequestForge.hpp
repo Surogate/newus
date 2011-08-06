@@ -17,9 +17,11 @@ public:
     typedef boost::asio::ip::tcp::socket Socket;
 
     RequestForge(FeedManager& owner);
+	~RequestForge();
     bool ConnectTo(const std::string& addr);
     bool Connected() const;
     bool GetRequest(const std::string& host, const std::string& path);
+	void Disconnect();
 
 private:
     Socket _socket;
@@ -28,11 +30,20 @@ private:
         return !(!response_stream || http_version.substr(0, 5) != "HTTP/");
     }
 
+	bool Connect(boost::asio::ip::tcp::resolver::iterator& endpoint_iterator);
+
     void SetGetRequest(std::ostream& in, const std::string& host, const std::string& path);
+	void SetPostRequest(std::ostream& in, const std::string& host, const std::string& path);
     bool HandleResponse();
     bool DisplayBody(boost::asio::streambuf& response, std::istream& response_stream);
     bool DisplayBodyHeader(boost::asio::streambuf& response, std::istream& response_stream);
     bool DisplayBodyBody(boost::asio::streambuf& response, std::istream& response_stream);
+	
+	inline const std::string endline() {
+		return "\r\n";
+	}
+
+
 };
 
 #endif	/* REQUESTFORGE_HPP */
