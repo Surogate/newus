@@ -19,7 +19,7 @@ int main(void) {
 	
 	Feed test(manager, input);
 
-	//std::cin.get();
+	std::cin.get();
     return 0;
 }
 

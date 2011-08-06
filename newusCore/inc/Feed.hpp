@@ -15,6 +15,7 @@ class FeedManager;
 class Feed {
 public:
 	Feed(FeedManager& fm, const std::string& addr);
+	~Feed();
 
 private:
 	void parseAddr(const std::string& addr);
