@@ -18,6 +18,10 @@ void Feed::parseAddr(const std::string& addr) {
 	unsigned int end = index;
 	unsigned int pathEndIndex = addr.size() - 1;
 	while (addr[pathEndIndex] != '/') pathEndIndex--;
+
+        if (start + (end - start) < addr.size() && end + (pathEndIndex - end) < addr.size()) {
+            std::cout << "parse ok" << std::endl;
+        }
 	_host = addr.substr(start, end - start);
 	_path = addr.substr(end, pathEndIndex - end);
 }
