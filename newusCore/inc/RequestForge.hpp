@@ -42,8 +42,6 @@ private:
 	inline const std::string endline() {
 		return "\r\n";
 	}
-
-
 };
 
 #endif	/* REQUESTFORGE_HPP */

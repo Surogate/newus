@@ -1,5 +1,20 @@
-glob:build
 glob:Makefile
 glob:nbproject
 glob:dist
 glob:.dep.inc
+syntax: glob
+Debug
+Release
+ipch
+newusUTest/newusUTest.vcxproj
+newusCore/newusCore.vcxproj
+newusCore/newusCore.vcxproj.filters
+newus.sdf
+newus.sln
+newus.suo
+newus.opensdf
+newusCore/newusCore.vcxproj.user
+newusUTest/newusUTest.vcxproj.filters
+newusUTest/newusUTest.vcxproj.user
+syntax: regexp
+/*vcxproj*/

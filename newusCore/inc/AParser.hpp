@@ -17,6 +17,9 @@ public:
     ~AParser();
 
 private:
+	AParser& operator=(const AParser& orig);
+
+	unsigned int _index;
     std::istream& _stream;
 };
 

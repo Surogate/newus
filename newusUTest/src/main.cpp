@@ -12,8 +12,6 @@
 
 int main(void) {
     FeedManager manager;
-	//const std::string host = "www.rockpapershotgun.com";
-	//const std::string path = "/feed/";
 
 	std::string input = "http://www.rockpapershotgun.com/feed/";
 	
