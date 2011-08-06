@@ -1,4 +1,6 @@
 
+#include <iostream>
+
 #include "Feed.hpp"
 #include "FeedManager.hpp"
 
