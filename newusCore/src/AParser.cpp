@@ -1,18 +1,17 @@
 
 #include "AParser.hpp"
 
-
-AParser::AParser(std::istream& stream) : _stream(stream), _index(0)
+AParser::AParser(std::string& buffer) : _index(0), _buffer(buffer)
 {}
 
 AParser::~AParser()
 {}
 
-AParser::AParser(const AParser& orig) : _stream(orig._stream), _index(0)
+AParser::AParser(const AParser& orig) : _index(orig._index), _buffer(orig._buffer)
 {}
 
-AParser& AParser::operator=(const AParser& orig) {
-	return *this;
+AParser& AParser::operator=(const AParser&) {
+    return *this;
 }
 
 

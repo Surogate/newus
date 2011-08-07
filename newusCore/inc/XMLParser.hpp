@@ -12,7 +12,7 @@
 
 class XMLParser : AParser {
 public:
-    XMLParser(std::istream& stream);
+    XMLParser(std::string& stream);
     ~XMLParser();
     XMLParser(const XMLParser& orig);
 

@@ -1,7 +1,7 @@
 
 #include "XMLParser.hpp"
 
-XMLParser::XMLParser(std::istream& stream) : AParser(stream)
+XMLParser::XMLParser(std::string& stream) : AParser(stream)
 {}
 
 XMLParser::~XMLParser()

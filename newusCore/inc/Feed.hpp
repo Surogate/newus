@@ -17,19 +17,18 @@ class FeedManager;
 
 class Feed {
 public:
-	Feed(FeedManager& fm, const std::string& addr);
-	~Feed();
+    Feed(FeedManager& fm, const std::string& addr);
+    ~Feed();
 
-	void GetArticle();
+    void GetArticle();
 
 private:
-	void parseAddr(const std::string& addr);
+    void parseAddr(const std::string& addr);
 
-	RequestForge _forge;
-	std::deque< Article > _ArticleList;
-	std::string _host;
-	std::string _path;
+    RequestForge _forge;
+    std::deque< Article > _ArticleList;
+    std::string _host;
+    std::string _path;
 };
 
 #endif	/* FEED_HPP */
-
