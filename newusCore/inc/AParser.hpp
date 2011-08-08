@@ -8,7 +8,9 @@
 #ifndef APARSER_HPP
 #define	APARSER_HPP
 
-#include <istream>
+#include <string>
+
+#include <boost/function.hpp>
 
 class AParser {
 public:
@@ -16,26 +18,20 @@ public:
     AParser(const AParser& orig);
     ~AParser();
 
+	inline char& getChar() {
+		return _buffer[_index];
+	}
+
+	inline const char& getChar() const {
+		return _buffer[_index];
+	}
+
     inline bool consume(char c) {
-        if (!eof() && c == _buffer[_index]) {
+        if (!eof() && c == getChar()) {
             _index++;
             return true;
         }
         return false;
-    }
-
-    inline bool consume(const std::string& str) {
-        unsigned int tmp = _index;
-        unsigned int i = 0;
-        while (!eof() && i < str.size() && str[i] == _buffer[_index]) {
-            ++i;
-            ++_index;
-        }
-        if (i < str.size()) {
-            _index = tmp;
-            return false;
-        }
-        return true;
     }
 
     inline bool eof() const {
@@ -44,57 +40,39 @@ public:
 
     inline bool read_char(char& c) {
         if (!eof()) {
-            c = _buffer[_index];
+            c = getChar();
             _index++;
             return true;
         }
         return false;
     }
 
-    inline bool read_some(std::string& in, unsigned int size) {
-        if (_index + size < _buffer.size()) {
-            unsigned int i = 0;
-            while (i < size) {
-                in.push_back(_buffer[_index]);
-                _index++;
-                i++;
-            }
-            return true;
-        }
-        return false;
-    }
+	bool consume(const std::string& str);
 
-    inline bool read_until(std::string& in, char c) {
-        unsigned int i = 0;
+	bool consume(const boost::function< bool() >& func); 
 
-        while (!eof() && consume(c)) {
-            in.push_back(_buffer[_index]);
-            i++;
-            _index++;
-        }
-       if (i > 0)
-           return true;
-        return false;
-    }
+	bool consume_blanks();
 
-    inline bool read_until(std::string& in, const std::string& str) {
-        unsigned int i = 0;
+	bool consume_until(char c);
 
-        while (!eof() && consume(str)) {
-            in.push_back(_buffer[_index]);
-            i++;
-            _index++;
-        }
-        if (i > 0)
-            return true;
-        return false;
-    }
+	bool consume_until(const std::string& delim);
 
-private:
-    AParser & operator=(const AParser&);
+	bool consume_until(const boost::function< bool() >& delim);
 
+    bool read_some(std::string& in, unsigned int size);
+
+    bool read_until(std::string& in, char delim);
+
+    bool read_until(std::string& in, const std::string& delim);
+
+	bool read_until_func(std::string& in, const boost::function< bool() >& delim);
+
+protected:
     unsigned int _index;
     std::string& _buffer;
+
+private:
+	AParser& operator=(const AParser& orig);
 };
 
 #endif	/* APARSER_HPP */
