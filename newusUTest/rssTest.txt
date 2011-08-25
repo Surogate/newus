@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+		<channel>		
+			<title>PC INpact</title>
+			<link>http://www.pcinpact.com</link>
+			<description>PC INpact.com - L'environnement informatique !</description>
+			<language>fr</language>
+			<copyright>Copyright 2003-2009 PC INpact. Tous droits réservés.</copyright>
+
+			<managingEditor>contact@pcinpact.com (contact PC INpact)</managingEditor>
+			<webMaster>contact@pcinpact.com (contact PC INpact)</webMaster>
+			<pubDate>Fri, 12 Aug 2011 16:18:35 +0200</pubDate>
+			<image>
+				<url>http://www.pcinpact.com/images/page/logo88x31.gif</url>
+				<title>PC INpact</title>
+
+				<link>http://www.pcinpact.com</link>
+				<width>88</width>
+				<height>31</height>
+			</image>
+			<atom:link href="http://www.pcinpact.com/include/news.xml" rel="self" type="application/rss+xml" />
+	<item>
+					<title>NVIDIA veut sa puce ARM Kal-El dans des portables Windows 8</title>
+
+					<description>Alors que NVIDIA vient d'annoncer des résultats financiers à la hausse dans tous les domaines, la firme fait également parler d'elle avec certains plans réservés au futur, et notamment à Windows 8.</description>
+					<link>http://www.pcinpact.com/actu/news/65049-nvidia-windows-8-kal-el-portables-arm.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65049-nvidia-windows-8-kal-el-portables-arm.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Processeur</category>
+					<pubDate>Fri, 12 Aug 2011 16:09:19 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Electronics Arts impose Origin pour Battlefield 3</title>
+					<description>Battlefield 3, l'un des jeux les plus attendus de l'année, risque d'avoir un lancement quelque peu perturbé. En effet, son éditeur Electronics Arts et DICE, son développeur, annoncent quelques nouvelles qui risquent de ne pas être du goût de tous ...</description>
+					<link>http://www.pcinpact.com/actu/news/65048-electronic-arts-origin-battlefield-3-call-of-duty.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65048-electronic-arts-origin-battlefield-3-call-of-duty.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+
+					<category>Jeux vidéo</category>
+					<pubDate>Fri, 12 Aug 2011 16:05:05 +0200</pubDate>
+				</item>
+		<item>
+					<title>L'éditeur d'Angry Birds pourrait valoir plus d'1,2 milliard de $</title>
+					<description>La bulle 2.0 semble imperméable à la crise boursière actuelle. Outre les folies Facebook, Twitter, Groupon ou encore Zynga, voilà que la société finlandaise Rovio, principalement connue pour son jeu Angry Birds, pourrait être valorisée à hauteur ...</description>
+					<link>http://www.pcinpact.com/actu/news/65047-rovio-angry-birds-bulle-internet.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65047-rovio-angry-birds-bulle-internet.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Finances - Sociétés</category>
+					<pubDate>Fri, 12 Aug 2011 16:02:52 +0200</pubDate>
+				</item>
+		<item>
+					<title>NVIDIA est en forme et n'est pas prêt de passer l'arme à gauche</title>
+
+					<description>Alors qu'AMD retrouve des couleurs, son concurrent NVIDIA affiche lui aussi une forme intéressante avec des résultats financiers en hausse à tous les niveaux.</description>
+					<link>http://www.pcinpact.com/actu/news/65046-nvidia-geforce-tegra-portables-smartphones-tablettes.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65046-nvidia-geforce-tegra-portables-smartphones-tablettes.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Finances - Sociétés</category>
+					<pubDate>Fri, 12 Aug 2011 14:31:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>13 failles corrigées chez Adobe : et pourquoi pas 400 ?</title>
+					<description>Adobe a publié une série de mises à jour pour de nombreux produits. Il s'agit de correctifs de sécurité venant colmater de nombreuses brèches dont une partie est critique.</description>
+					<link>http://www.pcinpact.com/actu/news/65045-adobe-flash-securite-failles-ormandy.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65045-adobe-flash-securite-failles-ormandy.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+
+					<category>Sécurité</category>
+					<pubDate>Fri, 12 Aug 2011 12:47:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Chrome 14 bêta chiffre enfin toutes les données synchronisées</title>
+					<description>Google vient de publier la bêta de Chrome 14, la prochaine mouture de son navigateur. Si les dernières évolutions du butineur ont été modestes en termes de fonctionnalités, Google ajoute cette fois davantage de nouveautés, mais essentiellement pour ...</description>
+					<link>http://www.pcinpact.com/actu/news/65044-google-chrome-14-native-client-synchro-chiffrement-lion.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65044-google-chrome-14-native-client-synchro-chiffrement-lion.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Navigateur</category>
+					<pubDate>Fri, 12 Aug 2011 11:53:12 +0200</pubDate>
+				</item>
+		<item>
+					<title>Windows Phone 7.5 est finalisé : une sortie le 1er septembre ?</title>
+
+					<description>On continue dans le domaine des systèmes mobiles. Après les rumeurs de l'arrivée d'Android 4.0 pour octobre, voici celles de Windows Phone 7.5 (Mango) pour le 1er septembre.
+
+
+
+
+La rumeur du 1er septembre vient de Pocket Lint.</description>
+					<link>http://www.pcinpact.com/actu/news/65043-windows-phone-7-mango-septembre-rtm.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65043-windows-phone-7-mango-septembre-rtm.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Téléphonie</category>
+					<pubDate>Fri, 12 Aug 2011 10:52:49 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Android 4.0 et le Nexus Prime pourraient arriver en octobre</title>
+					<description>L'univers Android est principalement divisé en deux actuellement. La branche 2.X pour les smartphones et la 3.X pour les tablettes. Android 4.</description>
+					<link>http://www.pcinpact.com/actu/news/65042-ice-cream-android-nexus-prime.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65042-ice-cream-android-nexus-prime.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+
+					<category>Téléphonie</category>
+					<pubDate>Fri, 12 Aug 2011 09:47:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Google Books : un bouton de partage dédié à Google+</title>
+					<description>En marge de son annonce concernant les jeux, Google a indiqué qu'un autre de ses services subissait une évolution : Books. Disponible depuis longtemps, ce n'est ni le plus réussi, ni le plus populaire des produits de la firme.</description>
+					<link>http://www.pcinpact.com/actu/news/65041-google-books-partage-design-france.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65041-google-books-partage-design-france.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Internet</category>
+					<pubDate>Fri, 12 Aug 2011 08:00:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>(MàJ) Twitter bouleverse vos flux et propose 2 nouveaux onglets</title>
+
+					<description>Mise à jour :
+
+Twitter semble bien décidé à proposer toute une série de petits changements ces jours-ci. Ainsi, on vient de voir apparaître une nouvelle possibilité sur le réseau social à l'oiseau bleu.</description>
+					<link>http://www.pcinpact.com/actu/news/65022-twitter-flux-onglets-pseudo-activite.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65022-twitter-flux-onglets-pseudo-activite.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Internet</category>
+					<pubDate>Fri, 12 Aug 2011 07:30:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Google+ : les jeux sont disponibles, mais dans un flux séparé</title>
+					<description>Il fallait s'y attendre, et cela avait d'ailleurs déjà été annoncé : les jeux débarquent sur Google+. Les équipes du géant de Mountain View viennent en effet d'officialiser la nouvelle, qui se propage déjà à tout va sur le réseau social maison, sur ...</description>
+					<link>http://www.pcinpact.com/actu/news/65035-google-jeux-angry-birds-bejeweld-sudoku.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65035-google-jeux-angry-birds-bejeweld-sudoku.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+
+					<category>Internet</category>
+					<pubDate>Fri, 12 Aug 2011 07:07:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Test d'un ventirad alternatif pour les GeForce GTX 570 / 580</title>
+					<description>Nos confrères de Techgage ont testé un ventirad VF3000F de Zalman qui viendra remplacer celui d'origine d'une GeForce GTX 570 ou GTX 580, pas toujours des plus silencieux.</description>
+					<link>http://www.pcinpact.com/actu/news/65038-zalman-vf3000f-ventirad-gpu-carte-graphique.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65038-zalman-vf3000f-ventirad-gpu-carte-graphique.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Carte graphique</category>
+					<pubDate>Fri, 12 Aug 2011 00:35:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Un duel fratricide de carte mère Asus équipée d'une puce Fusion</title>
+
+					<description>Tech Report vient de se faire (gourmands !) deux cartes mères Asus à la fois qui ont un point commun : l'APU E-350 d'AMD qui y est INtégré. La première est l'E35M1-I Deluxe, une version mini ITX, quant à la seconde c'est l'E35M1-M Pro au format ...</description>
+					<link>http://www.pcinpact.com/actu/news/65037-asus-e350-fusion-mini-itx-micro-atx.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65037-asus-e350-fusion-mini-itx-micro-atx.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Carte mère</category>
+					<pubDate>Fri, 12 Aug 2011 00:20:15 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Crysis 2 version DirectX 11 : quelle est la carte graphique idéale ?</title>
+					<description>Xbit-labs vient de se pencher sur les performances de Crysis 2, dans sa version PC, avec le récent patch apportant DirectX 11. Pour ce faire, ils ont testé toutes les cartes graphiques contemporaines d'AMD ou de NVIDIA.</description>
+					<link>http://www.pcinpact.com/actu/news/65036-geforce-radeon-directx-11-crysis-2-upgrade.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65036-geforce-radeon-directx-11-crysis-2-upgrade.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+
+					<category>Carte graphique</category>
+					<pubDate>Fri, 12 Aug 2011 00:05:15 +0200</pubDate>
+				</item>
+		<item>
+					<title>Microsoft veut généraliser la reconnaissance vocale à ses produits</title>
+					<description>La reconnaissance vocale devrait prendre de l'ampleur chez Microsoft. La firme de Redmond prévoit en effet de généraliser Microsoft TellMe à des produits comme Bing Mobile, Kinect, Windows Phone 7 Mango et même Windows 8.</description>
+					<link>http://www.pcinpact.com/actu/news/65034-microsoft-reconnaissance-vocale-tellme-windows-8.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65034-microsoft-reconnaissance-vocale-tellme-windows-8.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Nouvelle technologie</category>
+					<pubDate>Thu, 11 Aug 2011 18:51:15 +0200</pubDate>
+				</item>
+		<item>
+					<title>HTC compte accompagner ses smartphones d'écouteurs Beats</title>
+
+					<description>Après S3 Graphics, la prochaine acquisition majeure du Taiwanais HTC pourrait bien être Beats Electronics, une société spécialisée dans les casques et les écouteurs. Très connue aux États-Unis, notamment grâce à Dr.</description>
+					<link>http://www.pcinpact.com/actu/news/65033-htc-ecouteurs-casques-beats-dr-dre.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65033-htc-ecouteurs-casques-beats-dr-dre.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Finances - Sociétés</category>
+					<pubDate>Thu, 11 Aug 2011 17:45:24 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>(MàJ) AMD propose de la DDR3 sous sa marque Radeon</title>
+					<description>Mise à jour :
+
+AMD vient de donner quelques précisions concernant ces modules de mémoire, via l'un de ses porte-paroles, Dave Ereskine :
+
+« AMD ne fabrique pas de mémoire et ne prévoit pas d'en vendre de manière directe à ses clients.</description>
+					<link>http://www.pcinpact.com/actu/news/64966-amd-radeon-ddr3-apu-cpu.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/64966-amd-radeon-ddr3-apu-cpu.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+
+					<category>Mémoire RAM</category>
+					<pubDate>Thu, 11 Aug 2011 16:15:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Groupon a multiplié son nombre d'employés par 260 en deux ans</title>
+					<description>Groupon, société spécialisée dans l'achat groupé à bas prix et géolocalisé, s'étend dans le monde entier et prépare son introduction en bourse.</description>
+					<link>http://www.pcinpact.com/actu/news/65031-groupon-croissance-chiffre-affaires-employes-abonnes.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65031-groupon-croissance-chiffre-affaires-employes-abonnes.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Finances - Sociétés</category>
+					<pubDate>Thu, 11 Aug 2011 15:54:18 +0200</pubDate>
+				</item>
+		<item>
+					<title>Ultrabook : Intel injecte 300 millions de dollars à son écosystème</title>
+
+					<description>Intel croit en la pérennité en son concept d'Ultrabook et le montre puisque la société vient d'y investir, via sa branche Intel Capital, à hauteur de 300 millions de Dollars.</description>
+					<link>http://www.pcinpact.com/actu/news/65030-intel-ultrabook-investissement-technologies-.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65030-intel-ultrabook-investissement-technologies-.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Ordinateur portable</category>
+					<pubDate>Thu, 11 Aug 2011 15:30:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Facebook affiche les J'aime et les commentaires dans un fil dédié</title>
+					<description>Comme prévu par le Wall Street Journal, l'affichage des commentaires et des J'aime des amis sur Facebook commence à dépasser le cadre de l'expérimentation.</description>
+					<link>http://www.pcinpact.com/actu/news/65029-facebook-jaime-commentaires-amis-fil-actualites.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65029-facebook-jaime-commentaires-amis-fil-actualites.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+
+					<category>Internet</category>
+					<pubDate>Thu, 11 Aug 2011 14:28:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>VoIP : nombreuses améliorations pour TeamSpeak 3.0</title>
+					<description>TeamSpeak est un client de VoIP particulièrement connu dans le monde du jeu vidéo. Un administrateur peut ainsi configurer un serveur, puis les clients s'y connectent.</description>
+					<link>http://www.pcinpact.com/actu/news/65028-teamspeak-3-nouveautes-telechargement.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65028-teamspeak-3-nouveautes-telechargement.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Logiciels</category>
+					<pubDate>Thu, 11 Aug 2011 12:28:56 +0200</pubDate>
+				</item>
+		<item>
+					<title>Pour Mark Dean, co-concepteur du PC IBM, l'ère du PC se termine </title>
+
+					<description>Quiconque observe le monde informatique depuis plusieurs années peut sentir à quel point l'usage même de l'outil est en train d'évoluer. On parle ainsi de mort prochaine du PC dans sa forme classique ainsi que de l'avènement des smartphones et ...</description>
+					<link>http://www.pcinpact.com/actu/news/65027-mark-dean-ibm-ere-pc-fin-smartphones-tablettes.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65027-mark-dean-ibm-ere-pc-fin-smartphones-tablettes.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>PC</category>
+					<pubDate>Thu, 11 Aug 2011 12:07:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>PlayStation 3 : le firmware 3.70 synchronise seul les données</title>
+					<description>Sony vient de lancer la mise à jour 3.70 pour sa console de salon PlayStation 3. La grande nouveauté de cette version est la mise en place d'une synchronisation automatique pour les sauvegardes des jeux.</description>
+					<link>http://www.pcinpact.com/actu/news/65026-playstation-3-370-firmware-synchronisation-blu-ray-3d.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65026-playstation-3-370-firmware-synchronisation-blu-ray-3d.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+
+					<category>Console de jeux</category>
+					<pubDate>Thu, 11 Aug 2011 11:01:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Apple se tournerait vers Samsung pour les dalles de l'iPad 2</title>
+					<description>L'actualité Samsung continue avec une information qui nous vient de DigiTimes. Selon le site, Apple aurait décidé de stopper ses approvisionnements de dalles LCD en provenance de LG pour se tourner vers Samsung et un autre constructeur.</description>
+					<link>http://www.pcinpact.com/actu/news/65025-apple-dalles-lcd-ipad-2-lg-samsung-chimei.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65025-apple-dalles-lcd-ipad-2-lg-samsung-chimei.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Tablette PC</category>
+					<pubDate>Thu, 11 Aug 2011 10:15:56 +0200</pubDate>
+				</item>
+		<item>
+					<title>OpenGL 4.2 publié : AMD et NVIDIA proposent leurs pilotes</title>
+
+					<description>C'est le SIGGRAPH 2011 qui a été choisi par le Khronos Group pour officialiser la version 4.2 d'OpenGL, un an à peine après l'arrivée de la 4.1.</description>
+					<link>http://www.pcinpact.com/actu/news/65024-opengl-khronos-group-amd-nvidia-pilotes.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65024-opengl-khronos-group-amd-nvidia-pilotes.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Carte graphique</category>
+					<pubDate>Thu, 11 Aug 2011 10:15:06 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Samsung annonce le Galaxy R à base de Tegra 2 de NVIDIA</title>
+					<description>Samsung a beau être empêtré dans les plaintes d'Apple (et réciproquement), le constructeur n'en continue pas moins sa route dans le domaine des smartphones Android. Ainsi, plusieurs rumeurs parlaient d'un Galaxy R en approche.</description>
+					<link>http://www.pcinpact.com/actu/news/65023-samsung-galaxy-r-tegra-2.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65023-samsung-galaxy-r-tegra-2.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+
+					<category>Téléphonie</category>
+					<pubDate>Thu, 11 Aug 2011 09:49:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Apple poursuit aussi Motorola et sa Xoom en Allemagne</title>
+					<description>Si la première injonction du tribunal est la bonne pour faire interdire la vente de la Galaxy Tab de Samsung, on apprend par Florian Muller, à nouveau sur son blog, qu'une autre société est dans le collimateur d'Apple : Motorola et sa Xoom.</description>
+					<link>http://www.pcinpact.com/actu/news/65021-apple-interdit-xoom-motorola-ventes.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65021-apple-interdit-xoom-motorola-ventes.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Tablette PC</category>
+					<pubDate>Thu, 11 Aug 2011 09:15:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Call Of Duty : Modern Warfare 3 se montre à nouveau en vidéo</title>
+
+					<description>Actvision Blizzard remet le couvert sur son prochain hit en cours de production, Call Of Duty : Modern Warfware 3 ou CoD MW3 pour les intimes.</description>
+					<link>http://www.pcinpact.com/actu/news/65020-call-of-duty-modern-warfare-3.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65020-call-of-duty-modern-warfare-3.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Jeux vidéo</category>
+					<pubDate>Thu, 11 Aug 2011 08:45:02 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Les acquisitions les plus marquantes des années 2000</title>
+					<description>Selon Ernst &amp; Young's, les fusions et acquisitions dans les secteurs technologiques lors du deuxième trimestre 2011 ont atteint des niveaux très élevés, avec 52,1 milliards de dollars.</description>
+					<link>http://www.pcinpact.com/actu/news/65019-acquisitions-fusions-plus-marquantes-2000.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65019-acquisitions-fusions-plus-marquantes-2000.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+
+					<category>Finances - Sociétés</category>
+					<pubDate>Thu, 11 Aug 2011 06:06:03 +0200</pubDate>
+				</item>
+		<item>
+					<title>Un test INtéressant sur le Wi-Fi 802.11n et de ses performances</title>
+					<description>Nos confrères d'AnandTech viennent de se pencher sur un module Wi-Fi annoncé comme très performant par son fabricant : le Killer-N 1102 de Bigfoot, à la norme 802.11n. Mais ils ne se limitent pas à ce dernier, ce qui fait tout l'intérêt du dossier.</description>
+					<link>http://www.pcinpact.com/actu/news/65018-wifi-80211n-bigfoot-performances-intel.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65018-wifi-80211n-bigfoot-performances-intel.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Réseau</category>
+					<pubDate>Thu, 11 Aug 2011 00:35:16 +0200</pubDate>
+				</item>
+		<item>
+					<title>CNPS11x Extreme : le retour de Zalman dans les ventirads CPU ?</title>
+
+					<description>TweakTown vient de mettre en ligne son test du Ventirad CPU CNPS11x Extreme de Zalman. Ce modèle est au format tour dont la base est en cuivre et le dissipateur est composé de nombreuses ailettes en aluminium, les deux étant reliés par cinq caloducs.</description>
+					<link>http://www.pcinpact.com/actu/news/65017-zalman-cnps11x-ventirad-cpu-pwm.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65017-zalman-cnps11x-ventirad-cpu-pwm.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Refroidissement</category>
+					<pubDate>Thu, 11 Aug 2011 00:20:15 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Un autre test du boîtier Carbide 400R de Corsair</title>
+					<description>Hexus vient à son tour de mettre ses mains dans le boîtier Carbide 400R de Corsair. Ce châssis vient compléter par le bas les gammes Obsidian et Graphite du constructeur.</description>
+					<link>http://www.pcinpact.com/actu/news/65016-corsair-boitier-carbride-400r-atx.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65016-corsair-boitier-carbride-400r-atx.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+
+					<category>Boîtier</category>
+					<pubDate>Thu, 11 Aug 2011 00:05:15 +0200</pubDate>
+				</item>
+		<item>
+					<title>BitTorrent : un aveugle suspecté d'avoir téléchargé un film porno</title>
+					<description>Parmi les 200 000 Américains poursuivis pour avoir utilisé à mauvais escient BitTorrent, l'un d'entre eux sort particulièrement du lot, et pour cause : il est totalement aveugle et est accusé d'avoir téléchargé non pas de la musique, mais un film.</description>
+					<link>http://www.pcinpact.com/actu/news/65015-bittorrent-aveugle-telechargement-film-pornographique.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65015-bittorrent-aveugle-telechargement-film-pornographique.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Justice</category>
+					<pubDate>Wed, 10 Aug 2011 20:41:06 +0200</pubDate>
+				</item>
+		<item>
+					<title>Motorola ne dit pas non à Windows Phone 7, mais sous conditions</title>
+
+					<description>Principalement représenté par HTC, Samsung et LG, Windows Phone 7 ne décolle pas. Microsoft mise néanmoins sur les futurs produits de Nokia pour doper ses ventes. La firme de Redmond pourrait trouver un autre allié de poids au nom de Motorola.</description>
+					<link>http://www.pcinpact.com/actu/news/65014-motorola-windows-phone-7-nokia.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65014-motorola-windows-phone-7-nokia.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Téléphonie</category>
+					<pubDate>Wed, 10 Aug 2011 18:11:30 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Kindle : une application par navigateur pour éviter l'App Store </title>
+					<description>Si Amazon apprécie les utilisateurs d'iPad, il n'apprécie cependant pas la politique de l'App Store consistant à prélever 30 % des ventes réalisées via une application provenant de la boutique virtuelle.</description>
+					<link>http://www.pcinpact.com/actu/news/65013-kindle-cloud-reader-commissions-app-store.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65013-kindle-cloud-reader-commissions-app-store.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+
+					<category>Internet</category>
+					<pubDate>Wed, 10 Aug 2011 16:51:05 +0200</pubDate>
+				</item>
+		<item>
+					<title>Téléphonie illimitée : Free multiplie par 6 l'utilisation raisonnable</title>
+					<description>Pour la plupart des opérateurs, la téléphonie illimitée n'est que théorique. En effet, afin d'éviter les abus, de toutes petites lignes posent souvent certaines limites.</description>
+					<link>http://www.pcinpact.com/actu/news/65012-telephonie-illimitee-free-utilisation-raisonnable.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65012-telephonie-illimitee-free-utilisation-raisonnable.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Téléphonie</category>
+					<pubDate>Wed, 10 Aug 2011 16:35:05 +0200</pubDate>
+				</item>
+		<item>
+					<title>(MàJ) La Galaxy Tab 10.1 de Samsung est interdite à la vente en UE</title>
+
+					<description>Mise à jour : 
+
+Nous venons de nous entretenir avec Samsung via ses représentants locaux et tous les produits arrivés en stock avant le 9 août 2011 chez les revendeurs (soit le jour de la décision décrite ci-dessous) peuvent être librement ...</description>
+					<link>http://www.pcinpact.com/actu/news/65005-samsung-apple-galaxy-tab-interdite-europe.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65005-samsung-apple-galaxy-tab-interdite-europe.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Tablette PC</category>
+					<pubDate>Wed, 10 Aug 2011 15:34:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Bourse : Apple n°1 mondial durant quelques heures</title>
+					<description>Depuis quelques mois déjà, une seule et unique entreprise devance Apple en matière de capitalisation boursière : le pétrolier américain Exxon Mobil.</description>
+					<link>http://www.pcinpact.com/actu/news/65010-bourse-apple-numero-un-mondial-exxon-mobil.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65010-bourse-apple-numero-un-mondial-exxon-mobil.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+
+					<category>Finances - Sociétés</category>
+					<pubDate>Wed, 10 Aug 2011 14:13:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Alpha et Beta BitFénix : deux boîtiers sous la barre des 33 EUR</title>
+					<description>BitFénix persiste dans le domaine des boîtiers premier prix, en proposant deux nouveaux modèles, sous la référence Alpha et Beta. Comme pour le Shinobi, le constructeur se démarque en équipant ses boîtiers de nombreux emplacements et de certaines ...</description>
+					<link>http://www.pcinpact.com/actu/news/65009-beta-alpha-bitfenix-boitier-atx.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65009-beta-alpha-bitfenix-boitier-atx.htm</guid>					
+					<author>julien_a@pcinpact.com (Julien Arrachart)</author>
+					<category>Boîtier</category>
+					<pubDate>Wed, 10 Aug 2011 14:00:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>L'éditeur de jeux vidéo THQ licencie 200 personnes</title>
+
+					<description>L'éditeur THQ est un studio de développement de jeux vidéo à la source de titres connus tels que Warhammer 40K : Dawn of War, Saints Row, MX vs. ATV ou encore Frontlines : Fuel of War.</description>
+					<link>http://www.pcinpact.com/actu/news/65008-thq-200-licenciements-objectifs.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65008-thq-200-licenciements-objectifs.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Finances - Sociétés</category>
+					<pubDate>Wed, 10 Aug 2011 12:53:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Twitter propose désormais la mise en ligne directe d'images</title>
+					<description>Alors que l'on soupçonnait depuis plusieurs mois Twitter de vouloir proposer son propre service de partage et d'hébergement d'images, le réseau social vient de l'activer sur l'ensemble des comptes en ajoutant une petite icône au sein de la section « ...</description>
+					<link>http://www.pcinpact.com/actu/news/65007-twitter-images-photos-photobucket-twitpic.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65007-twitter-images-photos-photobucket-twitpic.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+
+					<category>Internet</category>
+					<pubDate>Wed, 10 Aug 2011 12:05:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>iOS 5 : la première configuration sans fil d'un iPad en images</title>
+					<description>Lorsque Steve Jobs a présenté iOS 5 lors de la WWDC du mois de juin, l'une des plus grosses nouveautés était l'absence de branchement obligatoire d'un appareil à un ordinateur, Mac ou PC.</description>
+					<link>http://www.pcinpact.com/actu/news/65006-ipad-ios-5-configuration-wifi-connexion-itunes.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/65006-ipad-ios-5-configuration-wifi-connexion-itunes.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Système d'exploitation</category>
+					<pubDate>Wed, 10 Aug 2011 11:39:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Avant Windows Phone 7, Nokia arrêtera ses modèles Symbian</title>
+
+					<description>En février dernier, Nokia et Microsoft ont signé un important accord à travers lequel le constructeur a redéfini l'intégralité de sa stratégie mobile. Ainsi, la quasi-totalité de son offre smartphones va basculer vers Windows Phone 7.</description>
+					<link>http://www.pcinpact.com/actu/news/65004-nokia-symbian-arret-commercialisation-wp7.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65004-nokia-symbian-arret-commercialisation-wp7.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Téléphonie</category>
+					<pubDate>Wed, 10 Aug 2011 10:50:00 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>L'application Facebook Messenger disponible pour iOS et Android</title>
+					<description>Le réseau social Facebook est si utilisé que son éditeur du même nom peut se permettre de lancer un Messenger. Comme on s'en doute, il s'agit d'une application destinée à s'échanger des messages entre possesseurs de comptes Facebook.</description>
+					<link>http://www.pcinpact.com/actu/news/65003-facebook-messenger-iphone-android.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65003-facebook-messenger-iphone-android.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+
+					<category>Logiciels</category>
+					<pubDate>Wed, 10 Aug 2011 09:10:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>(MàJ) Pilote 280.26 pour les cartes graphiques NVIDIA</title>
+					<description>Mise à jour : 
+
+Le pilote 280.19 bêta de NVIDIA a passé la certification WHQL de Microsoft et il est dorénavant estampillé 280.26 dans sa version finale.</description>
+					<link>http://www.pcinpact.com/actu/news/64838-nvidia-pilotes-28019-cartes-graphiques.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/64838-nvidia-pilotes-28019-cartes-graphiques.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Carte graphique</category>
+					<pubDate>Wed, 10 Aug 2011 09:09:00 +0200</pubDate>
+				</item>
+		<item>
+					<title>Acer Aspire 3951 : un ultrabook en préparation chez Acer ?</title>
+
+					<description>Acer aurait un ultrabook en préparation si l'on en croit le site vietnamien Sohoa qui vient de mettre en ligne quelques photos et caractéristiques techniques de ce que serait l'Aspire 3951 du Taiwanais.</description>
+					<link>http://www.pcinpact.com/actu/news/65001-acer-aspire-3951-ultrabook-intel.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65001-acer-aspire-3951-ultrabook-intel.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Ordinateur portable</category>
+					<pubDate>Wed, 10 Aug 2011 08:30:05 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Spotify aurait déjà attiré 175 000 abonnés aux États-Unis</title>
+					<description>Lancé depuis quelques semaines à peine outre-Atlantique, le service de streaming audio Spotify démarre de belle manière. La société suédoise, qui compte désormais 1,6 million d'abonnés en Europe, cumule déjà aux États-Unis 175 000 abonnés, pour 1,4 ...</description>
+					<link>http://www.pcinpact.com/actu/news/65000-spotify-175000-abonnes-etatsunis-streaming.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/65000-spotify-175000-abonnes-etatsunis-streaming.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+
+					<category>Internet</category>
+					<pubDate>Wed, 10 Aug 2011 07:07:04 +0200</pubDate>
+				</item>
+		<item>
+					<title>Le MacBook Air 11.6 pouces haut de gamme, vaut-il le coup ?</title>
+					<description>Nos confrères de Tech Radar ont reçu la déclinaison haut de gamme du MacBook Air 11.6 pouces d'Apple, le MC969F/A, sur lequel le Core i7 à 1.8 GHz ainsi que le SSD de 256 Go ont été installé en lieu et place du Core i5 à 1.6 GHz et du SSD de 128 Go.</description>
+					<link>http://www.pcinpact.com/actu/news/64999-apple-macbook-air-mc969-core-i7-11-pouces.htm</link>
+
+					<guid>http://www.pcinpact.com/actu/news/64999-apple-macbook-air-mc969-core-i7-11-pouces.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Apple</category>
+					<pubDate>Wed, 10 Aug 2011 00:35:16 +0200</pubDate>
+				</item>
+		<item>
+					<title>Le plus gros des petits Pentium G, le G850, a été testé en détail</title>
+
+					<description>Legit Reviews vient de passer le Pentium G850 à la moulinette et nous en propose un compte-rendu assez complet. Pour rappel, celui-ci est le modèle le plus haut de gamme de la famille des Pentium avec ses deux coeurs fonctionnant à 2.9 GHz.</description>
+					<link>http://www.pcinpact.com/actu/news/64998-pentium-g850-core-i3-2105-hd-graphics-proces.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/64998-pentium-g850-core-i3-2105-hd-graphics-proces.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Processeur</category>
+					<pubDate>Wed, 10 Aug 2011 00:20:16 +0200</pubDate>
+
+				</item>
+		<item>
+					<title>Comparatif de kits de watercooling dédiés aux GeForce GTX 590</title>
+					<description>PureOC vient de publier un comparatif de systèmes de watercooling dédiés aux GeForce GTX 590 de NVIDIA. En effet, cette carte graphique plutôt massive dispose d'origine d'un ventirad qui n'est pas toujours des plus silencieux.</description>
+					<link>http://www.pcinpact.com/actu/news/64997-kit-watercooling-test-geforce-gtx-590-waterb.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/64997-kit-watercooling-test-geforce-gtx-590-waterb.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+
+					<category>Refroidissement</category>
+					<pubDate>Wed, 10 Aug 2011 00:05:15 +0200</pubDate>
+				</item>
+			</channel>
+	</rss>

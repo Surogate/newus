@@ -1,31 +1,31 @@
 
+
+#include <iostream>
+#include <sstream>
+
 #include "AParser.hpp"
 
-AParser::AParser(std::string& buffer) : _index(0), _buffer(buffer)
+AParser::AParser(const std::string& buffer) : _index(0), _size(buffer.size()), _buffer(buffer)
 {}
 
 AParser::~AParser()
 {}
 
-AParser::AParser(const AParser& orig) : _index(orig._index), _buffer(orig._buffer)
+AParser::AParser(const AParser& orig) : _index(orig._index), _size(orig._size), _buffer(orig._buffer)
 {}
 
 AParser& AParser::operator=(const AParser&) {
 	return *this;
 }
 
-bool AParser::consume(const std::string& str) {
-	unsigned int tmp = _index;
-	unsigned int i = 0;
-	while (!eof() && i < str.size() && str[i] == getChar()) {
-		++i;
-		++_index;
+bool AParser::consume_str(const std::string& str) {
+	if (peek(str)) {
+		_index += str.size();
+		//std::cout << "consume " << str << " ok" << std::endl;
+		return true;
 	}
-	if (i < str.size()) {
-		_index = tmp;
-		return false;
-	}
-	return true;
+	//std::cout << "consume " << str << " fail" << std::endl;
+	return false;
 }
 
 bool AParser::consume(const boost::function< bool() >& func) {
@@ -37,9 +37,10 @@ bool AParser::consume(const boost::function< bool() >& func) {
 	return true;
 }
 
+
 bool AParser::consume_blanks() {
-	if (consume('\r') || consume('\n') || consume('\t') || consume(' ')) {
-		while (consume('\r') || consume('\n') || consume('\t') || consume(' '));
+	if (consume_blanks_simple()) {
+		while (consume_blanks_simple());
 		return true;
 	}
 	return false;
@@ -47,16 +48,16 @@ bool AParser::consume_blanks() {
 
 bool AParser::consume_until(char c) {
 	unsigned int i = 0;
-	while (getChar() != c && consume(getChar()))
+	while (peek(c) && consume(getChar()))
 		i++;
 
 	return i > 0;
 }
 
-bool AParser::consume_until(const std::string& delim) {
+bool AParser::consume_until_str(const std::string& delim) {
 	unsigned int i = 0;
 	
-	while (!consume(delim) && consume(getChar()))
+	while (!peek(delim) && consume(getChar()))
 		i++;
 	
 	return i > 0;
@@ -87,10 +88,11 @@ bool AParser::read_some(std::string& in, unsigned int size) {
 bool AParser::read_until(std::string& in, char delim) {
 	unsigned int i = 0;
 
-	while (!eof() && !consume(delim)) {
+	while (!eof() && !peek(delim)) {
 		in.push_back(getChar());
 		i++;
 		_index++;
+		//std::cout << "index " << _index << std::endl;
 	}
 	if (i > 0)
 		return true;
@@ -100,7 +102,7 @@ bool AParser::read_until(std::string& in, char delim) {
 bool AParser::read_until(std::string& in, const std::string& delim) {
 	unsigned int i = 0;
 
-	while (!eof() && !consume(delim)) {
+	while (!eof() && !peek(delim)) {
 		in.push_back(getChar());
 		i++;
 		_index++;
@@ -113,7 +115,7 @@ bool AParser::read_until(std::string& in, const std::string& delim) {
 bool AParser::read_until_func(std::string& in, const boost::function< bool() >& delim) {
 	unsigned int i = 0;
 	
-	while (!eof() && !consume(delim)) {
+	while (!eof() && !delim()) {
 		in.push_back(getChar());
 		i++;
 		_index++;
@@ -123,4 +125,76 @@ bool AParser::read_until_func(std::string& in, const boost::function< bool() >& 
 	return false;
 }
 
+bool AParser::read_quoted_text(std::string& in) {
+	return consume('"') && read_until(in, '"') && consume('"');
+}
 
+void AParser::displayText() const {
+	if (!eof()) {
+		std::cout << &_buffer[_index] << std::endl;
+	} else {
+		std::cout << "EOF" << std::endl;
+	}
+}
+
+unsigned int AParser::findIntLength() const {
+	unsigned int tmp = _index;
+	unsigned int result = 0;
+
+	while (_buffer[tmp] == '-' || _buffer[tmp] == '+') {
+		tmp++;
+	}
+
+	while (_buffer[tmp] >= '0' && _buffer[tmp] <= '9') {
+		result++;
+		tmp++;
+	}
+	return result;
+}
+
+unsigned int AParser::findFloatLenght() const {
+	unsigned int tmp = _index;
+	unsigned int result = 0;
+
+	while (_buffer[tmp] == '-' || _buffer[tmp] == '+') {
+		tmp++;
+	}
+
+	while ((_buffer[tmp] >= '0' && _buffer[tmp] <= '9') || _buffer[tmp] == '.') {
+		result++;
+		tmp++;
+	}
+	return result;
+}
+
+bool AParser::readInt(int& in) {
+	return readIntNumber(in);
+}
+
+bool AParser::readChar(char& in) {
+	return readIntNumber(in);
+}
+
+bool AParser::readInt(unsigned int& in) {
+	return readIntNumber(in);
+}
+
+bool AParser::readChar(unsigned char& in) {
+	return readIntNumber(in);
+}
+
+bool AParser::readShort(short& in) {
+	return readIntNumber(in);
+}
+
+bool AParser::readShort(unsigned short& in) {
+	return readIntNumber(in);
+}
+
+bool AParser::readFloat(float& in) {
+	return readFloatNumber(in);
+}
+
+bool AParser::readDouble(double& in) {
+	return readFloatNumber(in);
+}
