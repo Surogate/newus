@@ -19,7 +19,7 @@ void testNetwork() {
 	
 	Feed test(manager, input);
 
-	test.GetArticle();
+	test.fetchArticle();
 }
 
 void getFileFromFile(std::string& in, const std::string& from) {
@@ -53,11 +53,11 @@ void testParser() {
 	if (text.size()) {
 		XMLParser parser(text);
 		if (parser.consumeHeader()) {
-			std::deque< Article > list;
+			XMLParser::ArticleList list;
 			if (parser.getArticle(list)) {
 				for (unsigned int i = 0; i < list.size(); i++) {
-					std::cout << list[i].title << std::endl;
-					std::cout << list[i].body << std::endl << std::endl;
+					std::cout << list[i]->title << std::endl;
+					std::cout << list[i]->body << std::endl << std::endl;
 				}
 			}
 			else {
@@ -72,8 +72,26 @@ void testParser() {
 	}
 }
 
+void testAgregator() {
+	FeedManager man;
+
+	man.addFeed("http://www.rockpapershotgun.com/feed/");
+
+	const FeedManager::ArticleList& list = man.getList();
+
+	FeedManager::ArticleList::const_iterator it = list.begin();
+	FeedManager::ArticleList::const_iterator ite = list.end();
+
+	while (it != ite) {
+		std::cout << it->get()->title << std::endl;
+		std::cout << it->get()->pubDate << std::endl;
+		std::cout << it->get()->body << std::endl;
+		it++;
+	}
+}
+
 int main(void) {
-	testParser();
+	testAgregator();
 	std::cin.get();
 	return 0;
 }

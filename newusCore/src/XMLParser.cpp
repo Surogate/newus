@@ -4,6 +4,8 @@
 
 #include "XMLParser.hpp"
 #include "DateParser.hpp"
+#include "Singleton.hpp"
+#include "Pool.hpp"
 
 XMLParser::XMLParser(const std::string& stream) : AParser(stream)
 {}
@@ -14,11 +16,11 @@ XMLParser::~XMLParser()
 XMLParser::XMLParser(const XMLParser& orig) : AParser(orig)
 {}
 
-bool XMLParser::getArticle(std::deque< Article >& list) {
+bool XMLParser::getArticle(ArticleList& list) {
 	bool result = false;
 	while (!eof()) {
-		Article art;
-		if (parserItem(art))
+		boost::shared_ptr< Article > art = Singleton< Pool< Article > >::getInstance().getObj();
+		if (parserItem(*art))
 			list.push_back(art);
 		else
 			_index++;

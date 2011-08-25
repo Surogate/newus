@@ -12,12 +12,16 @@
 #include <map>
 #include <deque>
 
+#include <boost/smart_ptr.hpp>
+
 #include "AParser.hpp"
 #include "Article.hpp"
 
 class XMLParser : public AParser {
 public:
 	typedef std::map< std::string /* arg name */, std::string /* arg value */ > ArgMap;
+	typedef std::deque< Article::ArticlePtr > ArticleList;
+
 	struct Balise {
 		std::string name;
 		ArgMap arg;
@@ -28,7 +32,7 @@ public:
 	~XMLParser();
 	XMLParser(const XMLParser& orig);
 
-	bool getArticle(std::deque< Article >& list);
+	bool getArticle(ArticleList& list);
 	bool spaceOrEqualSign() const;
 	bool endArg();
 
