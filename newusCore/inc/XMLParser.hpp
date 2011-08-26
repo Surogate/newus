@@ -47,6 +47,8 @@ public:
 
 	bool parseBalise(Balise& in);
 	bool parseBalise(Balise& in, const std::string& name);
+	bool parseBaliseNotIn(std::map< std::string, Balise>& map, const std::string& not);
+	bool parseBaliseNot(Balise& in, const std::string& nameToNot);
 	bool parseArg(ArgMap& arg);
 	bool parseBaliseSimple(std::string& in, const std::string& name);
 	bool parseBaliseClose(const std::string& name);

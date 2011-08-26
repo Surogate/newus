@@ -14,10 +14,10 @@ public:
 	Pool() 
 		: index(0), container(), trash() {
 		container.push(std::vector< T >());
-		container.top().reserve(8);
+		container.top().resize(8);
 	}
 	
-	Pool(const Pool& orig) 
+	Pool(const Pool& orig)
 		: index(orig.index), container(orig.container), trash(orig.trash)
 	{}
 
@@ -26,24 +26,25 @@ public:
 		if (trash.size()) {
 			ptr = boost::shared_ptr<T>(trash.top(), boost::bind(&Pool::redeemObj, this, _1));
 			trash.pop();
-			return ptr;
+		} else {
+			realloc();
+			ptr = boost::shared_ptr<T>(&container.top()[index], boost::bind(&Pool::redeemObj, this, _1));
+			index++;
 		}
-
-		if (index >= container.top().size()) {
-			unsigned newSize = container.top().size() * 2;
-			container.push(std::vector< T >());
-			container.top().reserve(newSize);
-			index = 0;
-		}
-		
-		ptr = boost::shared_ptr<T>(&container.top()[index], boost::bind(&Pool::redeemObj, this, _1));
-		index++;
-		
 		return ptr;
 	}
 
 	void redeemObj(T* value) {
 		trash.push(value);
+	}
+
+	void realloc() {
+		if (index >= container.top().size()) {
+			unsigned newSize = container.top().size() * 2;
+			container.push(std::vector< T >());
+			container.top().resize(newSize);
+			index = 0;
+		}
 	}
 
 private:

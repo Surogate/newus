@@ -28,8 +28,8 @@ void Feed::parseAddr(const std::string& addr) {
 
 void Feed::fetchArticle() {
 	if (_forge.GetRequest(_host, _path)) {
-		std::cout << _forge.getResponse() << std::endl;
 		XMLParser parser(_forge.getResponse());
+		std::cout << "response size " << _forge.getResponse().size() << std::endl;
 		if (parser.consumeHeader() && parser.getArticle(_articleList)) {
 			std::cout << "request & parse ok" << std::endl;
 		} else {
@@ -43,4 +43,8 @@ void Feed::fetchArticle() {
 
 const Feed::ArticleList& Feed::getArticleList() const {
 	return _articleList;
+}
+
+const std::string& Feed::getHost() const {
+	return _host;
 }

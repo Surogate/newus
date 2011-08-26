@@ -136,10 +136,12 @@ bool RequestForge::HandleResponse() {
 		if (ValidResponse(response_stream, http_version)) {
 			if (status_code == 200) {
 				result = GetBody(response, response_stream, streambuffer);
+				_buffer = streambuffer.str();
 			} else {
 				_error = INVALID_RESPONSE;
 				std::cout << "status code " << status_code << std::endl;
 			}
+		} else {
 			_error = INVALID_FORMAT;
 		}
 	} else {

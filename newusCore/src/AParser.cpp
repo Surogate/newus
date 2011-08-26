@@ -198,3 +198,8 @@ bool AParser::readFloat(float& in) {
 bool AParser::readDouble(double& in) {
 	return readFloatNumber(in);
 }
+
+void AParser::debug_dumpPoint(unsigned int size) const {
+	std::cout << "## " << _index << std::endl;
+	std::cout << _buffer.substr(_index, size);
+}

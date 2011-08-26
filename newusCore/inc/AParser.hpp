@@ -145,6 +145,8 @@ protected:
 	unsigned int _size;
 	const std::string& _buffer;
 
+	void debug_dumpPoint(unsigned int size) const;
+
 private:
 	AParser& operator=(const AParser& orig);
 

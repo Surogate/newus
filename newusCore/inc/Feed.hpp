@@ -21,11 +21,13 @@ class FeedManager;
 class Feed {
 public:
 	typedef XMLParser::ArticleList ArticleList;
+	typedef boost::shared_ptr< Feed > FeedPtr;
 	Feed(FeedManager& fm, const std::string& addr);
 	~Feed();
 
 	void fetchArticle();
 	const ArticleList& getArticleList() const;
+	const std::string& getHost() const;
 
 private:
 	void parseAddr(const std::string& addr);

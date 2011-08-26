@@ -20,7 +20,7 @@
 class FeedManager {
 public:
 	typedef boost::asio::io_service Io_service;
-	typedef std::map< std::string /* host */, boost::shared_ptr< Feed > /* feed */ > FeedMap;
+	typedef std::map< std::string /* host */, Feed::FeedPtr /* feed */ > FeedMap;
 	typedef std::set< std::string /* guid */ > GuidUsed;
 	typedef std::list< Article::ArticlePtr > ArticleList;
 

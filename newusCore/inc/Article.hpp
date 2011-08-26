@@ -21,6 +21,7 @@ struct Article {
 	std::string link;
 	std::string body;
 	std::string author;
+	std::string comments;
 	std::deque< std::string > category;
 	boost::posix_time::ptime pubDate;
 };

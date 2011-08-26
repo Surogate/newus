@@ -46,38 +46,33 @@ bool XMLParser::consumeName(const std::string& name) {
 	return consume('<') && consume_str(name) && consume('>');
 }
 
+bool XMLParser::parseBaliseNotIn(std::map< std::string, Balise >& map, const std::string& not) {
+	Balise tmp;
+	if (parseBaliseNot(tmp, not)) {
+		map[tmp.name] = tmp;
+		return true;
+	}
+	return false;
+}
+
 bool XMLParser::parserItem(Article& in) {
 	consume_blanks();
 	if (consumeName("item")) {
-		Balise title;
-		Balise description;
-		Balise link;
-		Balise guid;
-		Balise author;
-		Balise pubDate;
+		std::map<std::string, Balise> map; 
 		std::deque< Balise > cat;
 
-		while (parseBalise(title, "title")
-			|| parseBalise(description, "description")
-			|| parseBalise(link, "link")
-			|| parseBalise(guid, "guid")
-			|| parseBalise(author, "author")
-			|| parseBalise(pubDate, "pubDate")
-			|| parseCategory(cat));
+		while (parseCategory(cat) || parseBaliseNotIn(map, "/item"));
 
 		if (consumeEndName("item")) {
-			in.title = title.body;
-			in.link = link.body;
-			in.body = description.body;
-			in.guid = guid.body;
-			in.author = author.body;
-			
-			DateParser parse(pubDate.body);
+			in.title = map["title"].body;
+			in.link = map["link"].body;
+			in.body = map["description"].body;
+			in.guid = map["guid"].body;
+			in.author = map["author"].body;
+			in.comments = map["comments"].body;
+			DateParser parse(map["pubDate"].body);
 
 			bool result = parse(in.pubDate);
-			
-			if (result)
-				std::cout << in.pubDate << std::endl;
 
 			for (unsigned int i = 0; i < cat.size(); ++i) {
 				in.category.push_back(cat[i].body);
@@ -93,6 +88,8 @@ bool XMLParser::parseCategory(std::deque<Balise>& cat) {
 	Balise tmp;
 	if (parseBalise(tmp, "category")) {
 		cat.push_back(tmp);
+		while (parseBalise(tmp, "category"))
+			cat.push_back(tmp);
 		return true;
 	}
 	return false;
@@ -103,6 +100,25 @@ bool XMLParser::parseBalise(Balise& in, const std::string& name) {
 	unsigned int tmp = _index;
 	if (consume('<') && consume_str(name)) {
 		in.name = name;
+		parseArg(in.arg);
+		if (consume_blanks() || consume('>')) {
+			boost::function< bool() > delim = boost::bind(&XMLParser::consumeEndName, this, in.name);
+			read_until(in.body, '<');
+			while (!consume(delim)) {
+				read_some(in.body, 1);
+				read_until(in.body, '<');
+			}
+			return true;
+		}
+	}
+	_index = tmp;
+	return false;
+}
+
+bool XMLParser::parseBaliseNot(Balise& in, const std::string& nameToNot) {
+	consume_blanks();
+	unsigned int tmp = _index;
+	if (consume('<') && read_until_func(in.name, boost::bind(&XMLParser::spaceOrEqualSign, this)) && in.name != nameToNot) {
 		parseArg(in.arg);
 		if (consume_blanks() || consume('>')) {
 			boost::function< bool() > delim = boost::bind(&XMLParser::consumeEndName, this, in.name);
