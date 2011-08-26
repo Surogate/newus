@@ -21,10 +21,8 @@ AParser& AParser::operator=(const AParser&) {
 bool AParser::consume_str(const std::string& str) {
 	if (peek(str)) {
 		_index += str.size();
-		//std::cout << "consume " << str << " ok" << std::endl;
 		return true;
 	}
-	//std::cout << "consume " << str << " fail" << std::endl;
 	return false;
 }
 
