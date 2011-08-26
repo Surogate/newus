@@ -13,7 +13,6 @@ bool DateParser::operator()(boost::posix_time::ptime& value) {
 	unsigned int hour;
 	unsigned int min;
 	unsigned int sec;
-
 	int timezone;
 
 	bool result = (
@@ -30,6 +29,7 @@ bool DateParser::operator()(boost::posix_time::ptime& value) {
 	if (result) {
 		unsigned int monthValue = MonthConvertion::getInstance().conversionValue[month];
 		value = boost::posix_time::ptime(boost::gregorian::date(year, monthValue, numDay), boost::posix_time::time_duration(hour, min, sec));
+		timezone /= 100;
 		value += boost::posix_time::hours(timezone);
 	}
 

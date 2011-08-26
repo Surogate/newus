@@ -1,6 +1,8 @@
 
 #include <fstream>
 
+#include <boost/thread.hpp>
+
 #include "FeedManager.hpp"
 #include "RequestForge.hpp"
 
@@ -35,7 +37,7 @@ void FeedManager::saveGuid() const {
 
 		while (it != ite) {
 			file << *it << '\n';
-			it++;
+			++it;
 		}
 	}
 }
@@ -54,6 +56,10 @@ void FeedManager::addFeed(const std::string& host) {
 	}
 }
 
+void FeedManager::deleteFeed(const std::string& host) {
+	_feed.erase(host);
+}
+
 void FeedManager::addGuid(const std::string& guid) {	
 	_guid.insert(guid);
 }
@@ -62,22 +68,30 @@ const FeedManager::ArticleList& FeedManager::getList() {
 	FeedMap::const_iterator it = _feed.begin();
 	FeedMap::const_iterator ite = _feed.end();
 
+	boost::thread_group threads;
 	while (it != ite) {
-		insertFeed(*(it->second));
-		it++;
+		threads.create_thread(boost::bind(&Feed::fetchArticle, it->second));
+		++it;
 	}
+	threads.join_all();
+
+	it = _feed.begin();
+	while (it != ite) {
+		insertFeed(*it->second);
+		++it;
+	}
+
 	return _list;
 }
 
 void FeedManager::insertFeed(Feed& feed) {
-	feed.fetchArticle();
 	const Feed::ArticleList& list = feed.getArticleList();
 	Feed::ArticleList::const_iterator it = list.begin();
 	Feed::ArticleList::const_iterator ite = list.end();
 
 	while (it != ite) {
 		orderInsertList(*it);
-		it++;
+		++it;
 	}
 }
 
@@ -91,8 +105,8 @@ void FeedManager::orderInsertList(Article::ArticlePtr ptr) {
 		ArticleList::iterator it = _list.begin();
 		ArticleList::iterator ite = _list.end();
 
-		while (it != ite && (*it)->pubDate < ptr->pubDate) {
-			it++;
+		while (it != ite && (*it)->pubDate > ptr->pubDate) {
+			++it;
 		}
 
 		if (it != ite) {

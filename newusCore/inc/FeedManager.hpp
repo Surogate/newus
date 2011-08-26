@@ -31,6 +31,8 @@ public:
 	const Io_service& getIo_service() const;
 
 	void addFeed(const std::string& host);
+	void deleteFeed(const std::string& host);
+	const FeedMap& getFeed() const;
 	void addGuid(const std::string& guid);
 	const ArticleList& getList(); 
 

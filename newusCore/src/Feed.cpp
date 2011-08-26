@@ -19,18 +19,16 @@ void Feed::parseAddr(const std::string& addr) {
 	unsigned int start = index;
 	while (addr[index] != '/') index++;
 	unsigned int end = index;
-	unsigned int pathEndIndex = addr.size() - 1;
-	while (addr[pathEndIndex] != '/') pathEndIndex--;
 
 	_host = addr.substr(start, end - start);
-	_path = addr.substr(end, pathEndIndex - end + 1);
+	_path = addr.substr(end);
 }
 
 void Feed::fetchArticle() {
 	if (_forge.GetRequest(_host, _path)) {
 		XMLParser parser(_forge.getResponse());
 		std::cout << "response size " << _forge.getResponse().size() << std::endl;
-		if (parser.consumeHeader() && parser.getArticle(_articleList)) {
+		if (parser.getArticle(_articleList)) {
 			std::cout << "request & parse ok" << std::endl;
 		} else {
 			std::cout << "parse fail" << std::endl;

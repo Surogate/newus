@@ -76,6 +76,7 @@ void testAgregator() {
 	FeedManager man;
 
 	man.addFeed("http://www.rockpapershotgun.com/feed/");
+	man.addFeed("http://www.pcinpact.com/include/news.xml");
 
 	const FeedManager::ArticleList& list = man.getList();
 
@@ -85,7 +86,7 @@ void testAgregator() {
 	while (it != ite) {
 		std::cout << it->get()->title << std::endl;
 		std::cout << it->get()->pubDate << std::endl;
-		std::cout << it->get()->body << std::endl;
+		//std::cout << it->get()->body << std::endl;
 		it++;
 	}
 }

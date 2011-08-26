@@ -7,6 +7,7 @@
 
 #include <boost/smart_ptr.hpp>
 #include <boost/bind.hpp>
+#include <boost/thread.hpp>
 
 template <typename T>
 class Pool {
@@ -22,6 +23,7 @@ public:
 	{}
 
 	boost::shared_ptr< T > getObj() {
+		boost::lock_guard<boost::mutex> guard(mut);
 		boost::shared_ptr< T > ptr;
 		if (trash.size()) {
 			ptr = boost::shared_ptr<T>(trash.top(), boost::bind(&Pool::redeemObj, this, _1));
@@ -35,9 +37,11 @@ public:
 	}
 
 	void redeemObj(T* value) {
+		boost::lock_guard<boost::mutex> guard(mut);
 		trash.push(value);
 	}
 
+protected:
 	void realloc() {
 		if (index >= container.top().size()) {
 			unsigned newSize = container.top().size() * 2;
@@ -51,6 +55,7 @@ private:
 	unsigned int index;
 	std::stack< std::vector< T > > container;
 	std::stack< T* > trash;
+	boost::mutex mut;
 };
 
 
