@@ -6,12 +6,42 @@
 #include "FeedManager.hpp"
 #include "RequestForge.hpp"
 
-FeedManager::FeedManager() : _io_service() {
+FeedManager::FeedManager() : _io_service(), _feed(), _guid(), _list() {
 	loadGuid();
+	loadFeed();
 }
 
 FeedManager::~FeedManager() {
 	saveGuid();
+	saveFeed();
+}
+
+void FeedManager::loadFeed() {
+	std::ifstream file("FeedSave.txt");
+
+	if (file.good()) {
+		std::string buffer;
+		do {
+			std::getline(file, buffer);
+			if (buffer.size()) {
+				addFeed(buffer);
+			}
+		} while (buffer.size());
+	}
+}
+
+void FeedManager::saveFeed() const {
+	std::ofstream file("FeedSave.txt", std::ios::trunc);
+
+	if (file.good()) {
+		FeedMap::const_iterator it = _feed.begin();
+		FeedMap::const_iterator ite = _feed.end();
+
+		while (it != ite) {
+			file << it->first << '\n';
+			++it;
+		}
+	}
 }
 
 void FeedManager::loadGuid() {
@@ -91,7 +121,7 @@ void FeedManager::insertFeed(Feed& feed) {
 
 	while (it != ite) {
 		orderInsertList(*it);
-		++it;
+		++it;	
 	}
 }
 

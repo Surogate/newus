@@ -90,7 +90,6 @@ bool AParser::read_until(std::string& in, char delim) {
 		in.push_back(getChar());
 		i++;
 		_index++;
-		//std::cout << "index " << _index << std::endl;
 	}
 	if (i > 0)
 		return true;

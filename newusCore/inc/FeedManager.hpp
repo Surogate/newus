@@ -37,6 +37,8 @@ public:
 	const ArticleList& getList(); 
 
 private:
+	void loadFeed();
+	void saveFeed() const;
 	void loadGuid();
 	void saveGuid() const;
 
