@@ -1,19 +1,13 @@
-/*
- * File:   main.cpp
- * Author: fancel
- *
- * Created on 28 July 2011, 23:49
- */
 
 #include <QtGui/QApplication>
+#include "Newusgui.hpp"
 
-int main(int ac, char** av) {
-    // initialize resources, if needed
-    // Q_INIT_RESOURCE(resfile);
+int main(int argc, char *argv[])
+{
+	QApplication a(argc, argv);
+	NewusGui w;
+	w.show();
 
-    QApplication app(ac, av);
-
-    // create and show your widgets here
-
-    return app.exec();
+	return a.exec();
 }
+

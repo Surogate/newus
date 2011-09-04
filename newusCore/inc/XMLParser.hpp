@@ -28,6 +28,8 @@ public:
 		std::string body;
 	};
 
+        typedef std::map< std::string, Balise > BaliseMap;
+
 	XMLParser(const std::string& stream);
 	~XMLParser();
 	XMLParser(const XMLParser& orig);
@@ -47,7 +49,8 @@ public:
 
 	bool parseBalise(Balise& in);
 	bool parseBalise(Balise& in, const std::string& name);
-	bool parseBaliseNotIn(std::map< std::string, Balise>& map, const std::string& not);
+	bool parseBaliseNotIn(BaliseMap&
+                                , const std::string&);
 	bool parseBaliseNot(Balise& in, const std::string& nameToNot);
 	bool parseArg(ArgMap& arg);
 	bool parseBaliseSimple(std::string& in, const std::string& name);

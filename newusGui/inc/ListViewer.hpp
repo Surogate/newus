@@ -6,9 +6,9 @@
 #include <QVBoxLayout>
 #include <QScrollArea>
 
-class Container : public QWidget 
+class Container : public QWidget
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
 	Container() : QWidget(0) {
@@ -48,12 +48,15 @@ public:
 		typename QList< T >::iterator ite = data.end();
 
 		while (it != ite) {
-			_cont.push(&(*it));
+			//_cont.push(&(*it));
+                    _layout.addWidget(&(*it));
 			++it;
 		}
 	}
+        
 private:
 	Container _cont;
+        QVBoxLayout _layout;
 
 	void setup_ui();
 };

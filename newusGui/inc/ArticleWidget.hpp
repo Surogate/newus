@@ -6,6 +6,7 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QTextEdit>
+#include <QListWidgetItem>
 
 #include "Article.hpp"
 

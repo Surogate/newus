@@ -2,6 +2,7 @@
 #include <fstream>
 
 #include <boost/thread.hpp>
+#include <boost/make_shared.hpp>
 
 #include "FeedManager.hpp"
 #include "RequestForge.hpp"
@@ -82,7 +83,7 @@ const FeedManager::Io_service& FeedManager::getIo_service() const {
 
 void FeedManager::addFeed(const std::string& host) {
 	if (!_feed.count(host)) {
-		_feed[host] = boost::make_shared<Feed>(*this, host);
+		_feed[host] = Feed::FeedPtr(new Feed(*this, host));
 	}
 }
 

@@ -2,6 +2,8 @@
 #include <boost/bind.hpp>
 #include <boost/date_time.hpp>
 
+#include <string>
+
 #include "XMLParser.hpp"
 #include "DateParser.hpp"
 #include "Singleton.hpp"
@@ -46,9 +48,11 @@ bool XMLParser::consumeName(const std::string& name) {
 	return consume('<') && consume_str(name) && consume('>');
 }
 
-bool XMLParser::parseBaliseNotIn(std::map< std::string, Balise >& map, const std::string& not) {
+bool XMLParser::parseBaliseNotIn(
+        BaliseMap& map,
+        const std::string& noti) {
 	Balise tmp;
-	if (parseBaliseNot(tmp, not)) {
+	if (parseBaliseNot(tmp, noti)) {
 		map[tmp.name] = tmp;
 		return true;
 	}
@@ -70,6 +74,7 @@ bool XMLParser::parserItem(Article& in) {
 			in.guid = map["guid"].body;
 			in.author = map["author"].body;
 			in.comments = map["comments"].body;
+
 			DateParser parse(map["pubDate"].body);
 
 			bool result = parse(in.pubDate);

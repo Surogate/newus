@@ -94,7 +94,7 @@ public:
 
 	bool consume(const boost::function< bool() >& func); 
 
-	bool AParser::consume_blanks_simple() {
+	bool consume_blanks_simple() {
 		return consume('\r') 
 			|| consume('\n') 
 			|| consume('\t') 

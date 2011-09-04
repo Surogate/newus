@@ -15,8 +15,7 @@ ArticleWidget::ArticleWidget(const Article& article)
 	setup_ui();
 }
 
-ArticleWidget::ArticleWidget(const ArticleWidget& orig)
-{
+ArticleWidget::ArticleWidget(const ArticleWidget& orig) {
 	this->operator=(orig);
 }
 
