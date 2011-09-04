@@ -34,7 +34,8 @@ public:
 	void deleteFeed(const std::string& host);
 	const FeedMap& getFeed() const;
 	void addGuid(const std::string& guid);
-	const ArticleList& getList(); 
+	const ArticleList& getList() const; 
+	void fetchArticle();
 
 private:
 	void loadFeed();

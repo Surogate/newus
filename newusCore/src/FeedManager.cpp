@@ -94,7 +94,7 @@ void FeedManager::addGuid(const std::string& guid) {
 	_guid.insert(guid);
 }
 
-const FeedManager::ArticleList& FeedManager::getList() {
+void FeedManager::fetchArticle() {
 	FeedMap::const_iterator it = _feed.begin();
 	FeedMap::const_iterator ite = _feed.end();
 
@@ -110,7 +110,9 @@ const FeedManager::ArticleList& FeedManager::getList() {
 		insertFeed(*it->second);
 		++it;
 	}
+}
 
+const FeedManager::ArticleList& FeedManager::getList() const {
 	return _list;
 }
 
