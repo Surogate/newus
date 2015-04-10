@@ -1,0 +1,1 @@
+Newus intend to offers an efficient browing of rss and a quick access to your social network.
